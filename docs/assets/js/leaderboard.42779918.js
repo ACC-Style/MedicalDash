@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["leaderboard"],{6950:function(e,t,a){"use strict";a.r(t);var n=function(){var e=this,t=e.$createElement;e._self._c;return e._m(0)},r=[function(){var e=this,t=e.$createElement,a=e._self._c||t;return a("div",{staticClass:"about p_4"},[a("h1",[e._v("Leaderboard")])])}],l=a("2877"),o={},s=Object(l["a"])(o,n,r,!1,null,null,null);s.options.__file="Leaderboard.vue";t["default"]=s.exports}}]);
+//# sourceMappingURL=leaderboard.42779918.js.map
