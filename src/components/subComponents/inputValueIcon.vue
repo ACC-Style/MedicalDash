@@ -15,10 +15,10 @@
 
 <script>
 export default {
-	name: "valueIcon",
-	props: {
-		inputState: { type: String, default: "" },
-		icon: { type: String, default: "fa-check" }
-	}
+  name: "valueIcon",
+  props: {
+    inputState: { type: String, default: "" },
+    icon: { type: String, default: "fa-check" }
+  }
 };
 </script>

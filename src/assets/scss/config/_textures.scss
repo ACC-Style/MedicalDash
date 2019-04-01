@@ -5,6 +5,12 @@ $texture-dark: "../img/cross_stripes.png";
 $texture-disabled: "../img/cross_disabled.png";
 $texture-cross: "../img/cross_color.png";
 $texture-connectwork: "../img/connectwork.png";
+$sg-texture-light: "assets/img/whisper.png";
+$sg-texture-medium: "assets/img/billie-holiday-speck.png";
+$sg-texture-dust: "assets/img/dust.png";
+$sg-texture-dark: "assets/img/cross_stripes.png";
+$sg-texture-disabled: "assets/img/cross_disabled.png";
+$sg-texture-cross: "assets/img/cross_color.png";
 
 div[class^="texture_"] {
 	background-attachment: local;
@@ -15,12 +21,21 @@ div[class^="texture_"] {
 
 @mixin texture-light() {
 	background-image: url($texture-light);
+	.sg & {
+		background-image: url($sg-texture-light);
+	}
 }
 @mixin texture-medium {
 	background-image: url($texture-medium);
+	.sg & {
+		background-image: url($sg-texture-medium);
+	}
 }
 @mixin texture-dust {
 	background-image: url($texture-dust);
+	.sg & {
+		background-image: url($sg-texture-dust);
+	}
 }
 @mixin texture-medium-shaded($level: 0) {
 	background-color: scale-color(
@@ -28,20 +43,31 @@ div[class^="texture_"] {
 		$lightness: 20% * $level
 	);
 	background-image: url($texture-medium);
+	.sg & {
+		background-image: url($sg-texture-mediu);
+	}
 }
 
 @mixin texture-dark() {
 	background-image: url($texture-dark);
+	.sg & {
+		background-image: url($sg-texture-dark);
+	}
 }
 
 @mixin texture-disabled() {
 	background-image: url($texture-disabled);
+	.sg & {
+		background-image: url($sg-texture-disabled);
+	}
 }
 
 @mixin texture-cross() {
 	background-image: url($texture-cross);
+	.sg & {
+		background-image: url($sg-texture-cross);
+	}
 }
-
 @mixin texture-dynamic() {
 	background-image: url($texture-connectwork);
 }
@@ -59,7 +85,7 @@ div[class^="texture_"] {
 	.texture_disabled              				- This texture is used to paint disabled buttons and ui items giving it a greyed and X'ed out appearand. 
 
 	markup:
-	<div class="{$modifiers} padding_5 border-color_black-8 border-width_1 border_solid text-center back_primary-4">{$modifiers} with a light primary color background</div>
+	<div class="{$modifiers} p_5 border-c_black-8 border-width_1 border_solid text-center bg_primary-4">{$modifiers} with a light primary color background</div>
 
 	Styleguide 0.3
 

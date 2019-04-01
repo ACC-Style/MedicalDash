@@ -70,53 +70,53 @@
 import messageHolder from "@/components/subComponents/inputMessageHolder.vue";
 import valueIcon from "@/components/subComponents/inputValueIcon.vue";
 export default {
-	name: "inputPhoneNumber",
-	props: {
-		label: { type: String, default: "Phone Number" },
-		value: { type: String, default: "" },
-		required: { type: Boolean, default: "true" },
-		pageHasError: { type: Boolean, default: false }
-	},
-	components: {
-		messageHolder,
-		valueIcon
-	},
-	data() {
-		return {
-			phone: this.value,
-			phoneShow: false,
-			inputHasError: false,
-			inputState: "",
-			stateMessage: ""
-		};
-	},
-	methods: {
-		clearInput() {
-			this.phone = "";
-			this.onChange(this.phone);
-		},
-		validate(value) {
-			var valid = true,
-				phoneLength = 10;
-			if (value.length <= phoneLength) {
-				this.inputState = "alert";
-				this.stateMessage = "phone is too short";
-				valid = false;
-			}
-			return valid;
-		},
-		onChange(value) {
-			// write any logic around how this should be protected, escaped, validated.
-			if (value == "") {
-				this.inputState = "";
-				this.stateMessage = "";
-				emitvalue = "";
-			}
-			if (validate(value)) {
-				this.$emit("update:phone", emitvalue);
-			}
-		}
-	}
+  name: "inputPhoneNumber",
+  props: {
+    label: { type: String, default: "Phone Number" },
+    value: { type: String, default: "" },
+    required: { type: Boolean, default: "true" },
+    pageHasError: { type: Boolean, default: false }
+  },
+  components: {
+    messageHolder,
+    valueIcon
+  },
+  data() {
+    return {
+      phone: this.value,
+      phoneShow: false,
+      inputHasError: false,
+      inputState: "",
+      stateMessage: ""
+    };
+  },
+  methods: {
+    clearInput() {
+      this.phone = "";
+      this.onChange(this.phone);
+    },
+    validate(value) {
+      var valid = true,
+        phoneLength = 10;
+      if (value.length <= phoneLength) {
+        this.inputState = "alert";
+        this.stateMessage = "phone is too short";
+        valid = false;
+      }
+      return valid;
+    },
+    onChange(value) {
+      // write any logic around how this should be protected, escaped, validated.
+      if (value == "") {
+        this.inputState = "";
+        this.stateMessage = "";
+        emitvalue = "";
+      }
+      if (validate(value)) {
+        this.$emit("update:phone", emitvalue);
+      }
+    }
+  }
 };
 </script>
 

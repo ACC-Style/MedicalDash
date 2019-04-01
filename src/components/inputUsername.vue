@@ -40,37 +40,37 @@ import messageHolder from "@/components/subComponents/inputMessageHolder.vue";
 import valueIcon from "@/components/subComponents/inputValueIcon.vue";
 
 export default {
-	name: "inputEmail",
-	props: {
-		label: { type: String, default: "UserName" },
-		value: { type: String, default: "" },
-		required: { type: Boolean, default: "true" },
-		pageHasError: { type: Boolean, default: false }
-	},
-	data() {
-		return {
-			username: this.value,
-			inputState: "",
-			stateMessage: ""
-		};
-	},
-	components: {
-		messageHolder,
-		valueIcon
-	},
-	methods: {
-		onChange: function(value) {
-			console.log(value);
-			if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
-				this.inputState = "";
-				this.$emit("update:username", value);
-			} else {
-				this.inputState = "alert";
-				this.stateMessage = "Not an email.";
-				this.$emit("update:username", "");
-			}
-		}
-	}
+  name: "inputEmail",
+  props: {
+    label: { type: String, default: "UserName" },
+    value: { type: String, default: "" },
+    required: { type: Boolean, default: "true" },
+    pageHasError: { type: Boolean, default: false }
+  },
+  data() {
+    return {
+      username: this.value,
+      inputState: "",
+      stateMessage: ""
+    };
+  },
+  components: {
+    messageHolder,
+    valueIcon
+  },
+  methods: {
+    onChange: function(value) {
+      console.log(value);
+      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+        this.inputState = "";
+        this.$emit("update:username", value);
+      } else {
+        this.inputState = "alert";
+        this.stateMessage = "Not an email.";
+        this.$emit("update:username", "");
+      }
+    }
+  }
 };
 </script>
 

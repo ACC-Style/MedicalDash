@@ -35,16 +35,16 @@
 
 <script>
 export default {
-	name: "inputMessageHolder",
-	props: {
-		stateMessage: "",
-		inputState: ""
-	}
+  name: "inputMessageHolder",
+  props: {
+    stateMessage: "",
+    inputState: ""
+  }
 };
 </script>
 
 <style scoped>
 .message-holder {
-	transition: border-width 0.1s linear;
+  transition: border-width 0.1s linear;
 }
 </style>

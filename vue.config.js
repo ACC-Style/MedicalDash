@@ -1,7 +1,7 @@
 module.exports = {
-  outputDir: 'docs',
-  assetsDir: 'assets',
-  baseUrl: '/LoginPrototype/',
+  outputDir: "docs",
+  assetsDir: "assets",
+  baseUrl: "/LoginPrototype/",
   runtimeCompiler: undefined,
   productionSourceMap: undefined,
   parallel: undefined,

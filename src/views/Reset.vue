@@ -102,127 +102,126 @@ import inputPassword from "@/components/inputPassword.vue";
 import loginLogo from "@/components/loginLogo.vue";
 
 export default {
-	name: "reset",
-	components: {
-		inputPassword,
-		loginLogo
-	},
-	data() {
-		return {
-			username: "",
-			password: "",
-			pageError: "",
-			mode: "resetPassword"
-		};
-	},
-	methods: {
-		submitDisabled: function() {
-			if (this.password_1 != "" && this.password_2 != "") {
-				return true;
-			}
-			return false;
-		},
-		pageHasError: function() {
-			if (this.pageError != "") {
-				return true;
-			}
-			return false;
-		},
-		pageValidation() {
-			if (this.pageError == "") {
-				this.pageError =
-					"Your email and password does not match our records.";
-			} else {
-				this.pageError = "";
-			}
-		},
-		onModeChange(value) {
-			this.pageError = "";
-			this.mode = value;
-		}
-	}
+  name: "reset",
+  components: {
+    inputPassword,
+    loginLogo
+  },
+  data() {
+    return {
+      username: "",
+      password: "",
+      pageError: "",
+      mode: "resetPassword"
+    };
+  },
+  methods: {
+    submitDisabled: function() {
+      if (this.password_1 != "" && this.password_2 != "") {
+        return true;
+      }
+      return false;
+    },
+    pageHasError: function() {
+      if (this.pageError != "") {
+        return true;
+      }
+      return false;
+    },
+    pageValidation() {
+      if (this.pageError == "") {
+        this.pageError = "Your email and password does not match our records.";
+      } else {
+        this.pageError = "";
+      }
+    },
+    onModeChange(value) {
+      this.pageError = "";
+      this.mode = value;
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .logo-lockup {
-	display: flex;
-	flex-direction: column;
-	@media only screen and (min-width: 500px) {
-		flex-direction: row;
-	}
+  display: flex;
+  flex-direction: column;
+  @media only screen and (min-width: 500px) {
+    flex-direction: row;
+  }
 }
 
 .logo-lockup .logo {
-	height: 40px;
-	flex: 0 1 0px;
-	margin-bottom: 0.5rem;
-	@media only screen and (min-width: 500px) {
-		height: 80px;
-	}
+  height: 40px;
+  flex: 0 1 0px;
+  margin-bottom: 0.5rem;
+  @media only screen and (min-width: 500px) {
+    height: 80px;
+  }
 }
 
 .logo-lockup .text {
-	flex: 1 1 auto;
-	line-height: 1;
-	font-size: 24px;
-	align-self: center;
-	border-top: 3px solid #00386b;
-	padding-top: 1rem;
-	text-align: center;
-	color: #00386b;
-	@media only screen and (min-width: 500px) {
-		border-left: 3px solid #00386b;
-		padding-left: 1rem;
-		text-align: left;
-		padding-top: 0;
-		border-top: 0 none;
-		font-size: 40px;
-	}
+  flex: 1 1 auto;
+  line-height: 1;
+  font-size: 24px;
+  align-self: center;
+  border-top: 3px solid #00386b;
+  padding-top: 1rem;
+  text-align: center;
+  color: #00386b;
+  @media only screen and (min-width: 500px) {
+    border-left: 3px solid #00386b;
+    padding-left: 1rem;
+    text-align: left;
+    padding-top: 0;
+    border-top: 0 none;
+    font-size: 40px;
+  }
 }
 
 .slideInRight-enter-active,
 .slideInRight-leave-active {
-	transition: transform 0.5s ease, opacity 0.25s ease 0.25s;
+  transition: transform 0.5s ease, opacity 0.25s ease 0.25s;
 }
 /*.slideInRight-enter-active {
 	transition-delay: 0.5s;
 }*/
 .slideInRight-leave-to /* .slideIn-leave-active below version 2.1.8 */ {
-	transform: translateX(-100%);
-	opacity: 0;
+  transform: translateX(-100%);
+  opacity: 0;
 }
 .slideInRight-enter /* .slideIn-leave-active below version 2.1.8 */ {
-	transform: translateX(100%);
-	opacity: 0;
+  transform: translateX(100%);
+  opacity: 0;
 }
 .slideInRight-enter-to {
-	transform: translateX(1);
-	opacity: 1;
+  transform: translateX(1);
+  opacity: 1;
 }
 .slideInRight-move {
-	transition: transform 0.5s ease;
-	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
+  transition: transform 0.5s ease;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 .crossFade-enter-active,
 .crossFade-leave-active {
-	transition: opacity 0.25s ease 0.25s;
+  transition: opacity 0.25s ease 0.25s;
 }
 
 .crossFade-leave-to /* .slideIn-leave-active below version 2.1.8 */ {
-	opacity: 0;
+  opacity: 0;
 }
 .crossFade-enter /* .slideIn-leave-active below version 2.1.8 */ {
-	opacity: 0;
+  opacity: 0;
 }
 .crossFade-enter-to {
-	opacity: 1;
+  opacity: 1;
 }
 .crossFade-move {
-	transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 </style>

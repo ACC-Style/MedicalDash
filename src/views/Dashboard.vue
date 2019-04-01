@@ -93,10 +93,10 @@
 <script>
 import loginLogo from "@/components/loginLogo.vue";
 export default {
-	name: "dashboard",
-	components: {
-		loginLogo
-	}
+  name: "dashboard",
+  components: {
+    loginLogo
+  }
 };
 </script>
 
@@ -104,98 +104,98 @@ export default {
 /* https://codepen.io/sazzad/pen/yNNNJG?editors=0100 */
 a.animated-button:link,
 a.animated-button:visited {
-	position: relative;
-	z-index: 1;
-	display: block;
-	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
-	overflow: hidden;
-	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
-	-webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
-	-o-transition: all 1s ease;
-	transition: all 1s ease;
+  position: relative;
+  z-index: 1;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
 }
 a.animated-button:link:after,
 a.animated-button:visited:after {
-	content: "";
-	position: absolute;
-	height: 0%;
-	left: 50%;
-	top: 50%;
-	width: 300%;
-	z-index: -1;
-	-webkit-transition: all 0.75s ease 0s;
-	-moz-transition: all 0.75s ease 0s;
-	-o-transition: all 0.75s ease 0s;
-	transition: all 0.75s ease 0s;
+  content: "";
+  position: absolute;
+  height: 0%;
+  left: 50%;
+  top: 50%;
+  width: 300%;
+  z-index: -1;
+  -webkit-transition: all 0.75s ease 0s;
+  -moz-transition: all 0.75s ease 0s;
+  -o-transition: all 0.75s ease 0s;
+  transition: all 0.75s ease 0s;
 }
 a.animated-button:link .text,
 a.animated-button:visited .text {
-	color: #fff;
-	text-shadow: none;
-	z-index: 100;
+  color: #fff;
+  text-shadow: none;
+  z-index: 100;
 }
 a.animated-button:link:hover,
 a.animated-button:visited:hover {
-	color: #fff;
-	text-shadow: none;
+  color: #fff;
+  text-shadow: none;
 }
 a.animated-button:link:hover:after,
 a.animated-button:visited:hover:after {
-	height: 1000%;
+  height: 1000%;
 }
 /* Victoria Buttons */
 
 a.animated-button.victoria-one {
-	border: 2px solid #db7b14;
+  border: 2px solid #db7b14;
 }
 a.animated-button.victoria-one:after {
-	background: #db7b14;
-	-moz-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
-	-ms-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
-	-webkit-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
-	transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+  background: #db7b14;
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+  transform: translateX(-50%) translateY(-50%) rotate(-25deg);
 }
 a.animated-button.victoria-two {
-	border: 2px solid #db7b14;
+  border: 2px solid #db7b14;
 }
 a.animated-button.victoria-two:after {
-	background: #db7b14;
-	-moz-transform: translateX(-50%) translateY(-50%) rotate(25deg);
-	-ms-transform: translateX(-50%) translateY(-50%) rotate(25deg);
-	-webkit-transform: translateX(-50%) translateY(-50%) rotate(25deg);
-	transform: translateX(-50%) translateY(-50%) rotate(25deg);
+  background: #db7b14;
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(25deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(25deg);
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(25deg);
+  transform: translateX(-50%) translateY(-50%) rotate(25deg);
 }
 a.animated-button.victoria-three {
-	border: 2px solid #db7b14;
+  border: 2px solid #db7b14;
 }
 a.animated-button.victoria-three:after {
-	background: #db7b14;
-	opacity: 0.5;
-	-moz-transform: translateX(-50%) translateY(-50%);
-	-ms-transform: translateX(-50%) translateY(-50%);
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
+  background: #db7b14;
+  opacity: 0.5;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
 a.animated-button.victoria-three:hover:after {
-	height: 140%;
-	opacity: 1;
+  height: 140%;
+  opacity: 1;
 }
 a.animated-button.victoria-four {
-	border: 2px solid #db7b14;
+  border: 2px solid #db7b14;
 }
 a.animated-button.victoria-four:after {
-	background: #db7b14;
-	opacity: 0.5;
-	-moz-transform: translateY(-50%) translateX(-50%) rotate(90deg);
-	-ms-transform: translateY(-50%) translateX(-50%) rotate(90deg);
-	-webkit-transform: translateY(-50%) translateX(-50%) rotate(90deg);
-	transform: translateY(-50%) translateX(-50%) rotate(90deg);
+  background: #db7b14;
+  opacity: 0.5;
+  -moz-transform: translateY(-50%) translateX(-50%) rotate(90deg);
+  -ms-transform: translateY(-50%) translateX(-50%) rotate(90deg);
+  -webkit-transform: translateY(-50%) translateX(-50%) rotate(90deg);
+  transform: translateY(-50%) translateX(-50%) rotate(90deg);
 }
 a.animated-button.victoria-four:hover:after {
-	opacity: 1;
-	height: 600% !important;
+  opacity: 1;
+  height: 600% !important;
 }
 </style>

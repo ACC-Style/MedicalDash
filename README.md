@@ -1,6 +1,6 @@
 # Medical Dash Prototype
 
-This is a play area to construct a proof of concept for the Medical Dash a gamified learning applicationg applicaiton
+This is a play area to construct a proof of concept for the Medical Dash a gamified learning applicationing applicaiton
 
 ## Project setup
 

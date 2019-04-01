@@ -159,47 +159,44 @@ import inputUsername from "@/components/inputUsername.vue";
 import loginLogo from "@/components/loginLogo.vue";
 
 export default {
-	name: "login",
-	components: {
-		inputPassword,
-		inputUsername,
-		loginLogo
-	},
-	data() {
-		return {
-			username: "",
-			password: "",
-			pageError: "",
-			mode: "login"
-		};
-	},
-	methods: {
-		submitDisabled: function() {
-			if (this.username != "" && this.password != "") {
-				return true;
-			}
-			return false;
-		},
-		pageHasError: function() {
-			if (this.pageError != "") {
-				return true;
-			}
-			return false;
-		},
-		pageValidation() {
-			if (this.pageError == "") {
-				this.pageError =
-					"Your email and password does not match our records.";
-			} else {
-				this.pageError = "";
-			}
-		},
-		onModeChange(value) {
-			this.pageError = "";
-			this.mode = value;
-		}
-	}
+  name: "login",
+  components: {
+    inputPassword,
+    inputUsername,
+    loginLogo
+  },
+  data() {
+    return {
+      username: "",
+      password: "",
+      pageError: "",
+      mode: "login"
+    };
+  },
+  methods: {
+    submitDisabled: function() {
+      if (this.username != "" && this.password != "") {
+        return true;
+      }
+      return false;
+    },
+    pageHasError: function() {
+      if (this.pageError != "") {
+        return true;
+      }
+      return false;
+    },
+    pageValidation() {
+      if (this.pageError == "") {
+        this.pageError = "Your email and password does not match our records.";
+      } else {
+        this.pageError = "";
+      }
+    },
+    onModeChange(value) {
+      this.pageError = "";
+      this.mode = value;
+    }
+  }
 };
 </script>
-
-

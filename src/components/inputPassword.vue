@@ -76,57 +76,57 @@
 import messageHolder from "@/components/subComponents/inputMessageHolder.vue";
 import valueIcon from "@/components/subComponents/inputValueIcon.vue";
 export default {
-	name: "inputPassword",
-	props: {
-		label: { type: String, default: "Password" },
-		value: { type: String, default: "" },
-		required: { type: Boolean, default: "true" },
-		pageHasError: { type: Boolean, default: false }
-	},
-	components: {
-		messageHolder,
-		valueIcon
-	},
-	data() {
-		return {
-			password: this.value,
-			passwordShow: false,
-			inputHasError: false,
-			inputState: "",
-			stateMessage: ""
-		};
-	},
-	methods: {
-		passwordShowToggle() {
-			this.passwordShow = !this.passwordShow;
-		},
-		resetPassword() {
-			this.password = "";
-			this.onChange(this.password);
-		},
-		onChange(value) {
-			// write any logic around how this should be protected, escaped, validated.
-			var emitvalue = "",
-				passwordLength = 5;
+  name: "inputPassword",
+  props: {
+    label: { type: String, default: "Password" },
+    value: { type: String, default: "" },
+    required: { type: Boolean, default: "true" },
+    pageHasError: { type: Boolean, default: false }
+  },
+  components: {
+    messageHolder,
+    valueIcon
+  },
+  data() {
+    return {
+      password: this.value,
+      passwordShow: false,
+      inputHasError: false,
+      inputState: "",
+      stateMessage: ""
+    };
+  },
+  methods: {
+    passwordShowToggle() {
+      this.passwordShow = !this.passwordShow;
+    },
+    resetPassword() {
+      this.password = "";
+      this.onChange(this.password);
+    },
+    onChange(value) {
+      // write any logic around how this should be protected, escaped, validated.
+      var emitvalue = "",
+        passwordLength = 5;
 
-			if (value.length > passwordLength) {
-				this.inputState = "";
-				this.stateMessage = "";
-				emitvalue = value;
-			}
-			if (value.length <= passwordLength) {
-				this.inputState = "alert";
-				this.stateMessage = "Password is too short";
-				emitvalue = "";
-			}
-			if (value == "") {
-				this.inputState = "";
-				this.stateMessage = "";
-				emitvalue = "";
-			}
-			this.$emit("update:password", emitvalue);
-		}
-	}
+      if (value.length > passwordLength) {
+        this.inputState = "";
+        this.stateMessage = "";
+        emitvalue = value;
+      }
+      if (value.length <= passwordLength) {
+        this.inputState = "alert";
+        this.stateMessage = "Password is too short";
+        emitvalue = "";
+      }
+      if (value == "") {
+        this.inputState = "";
+        this.stateMessage = "";
+        emitvalue = "";
+      }
+      this.$emit("update:password", emitvalue);
+    }
+  }
 };
 </script>
 
