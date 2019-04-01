@@ -1,13 +1,13 @@
 <template>
-	<div id="inputEmail" class="question">
+	<div id="inputPassword" class="question">
 		<label
 			for="email"
 			v-bind:class="{
-				'c_secondary-4': inputStatef == '',
+				'c_primary-4': inputState == '',
 				'c_alert-4': inputState == 'alert',
 				'c_warning-4': inputState == 'warning'
 				}"
-			class="label-holder grid-x font_1 font_bold"
+			class="label-holder grid-x font_1 font_bold c_priamry-4"
 		>
 			<span class="text cell shrink">{{ label }}</span>
 			<span v-if="required" class="required-holder cell shrink">
@@ -54,15 +54,15 @@
 			<button
 				v-if="password !=''"
 				type="button"
-				class="c_secondary-4 hover:c_black value-space cell shrink br_solid br-w_1 p_3 p-b_2 br_secondary-n5 texture_medium"
+				class="c_secondary-4 h:c_black value-space cell shrink br_solid br-w_1 p_3 p-b_2 br_secondary-n5 texture_medium"
 				@click="resetPassword"
 			>
 				<i class="fas fa-times"></i>
 			</button>
-			
+
 			<button
 				type="button"
-				class="value-space cell shrink br_solid br-w_1 p_3 p-b_2 br_secondary-n5 texture_medium c_secondary-4 hover:c_black"
+				class="value-space cell shrink br_solid br-w_1 p_3 p-b_2 br_secondary-n5 texture_medium c_secondary-4 h:c_black"
 				@click="passwordShowToggle"
 			>
 				<i v-if="passwordShow" class="fas fa-eye"></i>
@@ -76,57 +76,57 @@
 import messageHolder from "@/components/subComponents/inputMessageHolder.vue";
 import valueIcon from "@/components/subComponents/inputValueIcon.vue";
 export default {
-  name: "inputPassword",
-  props: {
-    label: { type: String, default: "Password" },
-    value: { type: String, default: "" },
-    required: { type: Boolean, default: "true" },
-    pageHasError: { type: Boolean, default: false }
-  },
-  components: {
-    messageHolder,
-    valueIcon
-  },
-  data() {
-    return {
-      password: this.value,
-      passwordShow: false,
-      inputHasError: false,
-      inputState: "",
-      stateMessage: ""
-    };
-  },
-  methods: {
-    passwordShowToggle() {
-      this.passwordShow = !this.passwordShow;
-    },
-    resetPassword() {
-      this.password = "";
-      this.onChange(this.password);
-    },
-    onChange(value) {
-      // write any logic around how this should be protected, escaped, validated.
-      var emitvalue = "",
-        passwordLength = 5;
+	name: "inputPassword",
+	props: {
+		label: { type: String, default: "Password" },
+		value: { type: String, default: "" },
+		required: { type: Boolean, default: "true" },
+		pageHasError: { type: Boolean, default: false }
+	},
+	components: {
+		messageHolder,
+		valueIcon
+	},
+	data() {
+		return {
+			password: this.value,
+			passwordShow: false,
+			inputHasError: false,
+			inputState: "",
+			stateMessage: ""
+		};
+	},
+	methods: {
+		passwordShowToggle() {
+			this.passwordShow = !this.passwordShow;
+		},
+		resetPassword() {
+			this.password = "";
+			this.onChange(this.password);
+		},
+		onChange(value) {
+			// write any logic around how this should be protected, escaped, validated.
+			var emitvalue = "",
+				passwordLength = 5;
 
-      if (value.length > passwordLength) {
-        this.inputState = "";
-        this.stateMessage = "";
-        emitvalue = value;
-      }
-      if (value.length <= passwordLength) {
-        this.inputState = "alert";
-        this.stateMessage = "Password is too short";
-        emitvalue = "";
-      }
-      if (value == "") {
-        this.inputState = "";
-        this.stateMessage = "";
-        emitvalue = "";
-      }
-      this.$emit("update:password", emitvalue);
-    }
-  }
+			if (value.length > passwordLength) {
+				this.inputState = "";
+				this.stateMessage = "";
+				emitvalue = value;
+			}
+			if (value.length <= passwordLength) {
+				this.inputState = "alert";
+				this.stateMessage = "Password is too short";
+				emitvalue = "";
+			}
+			if (value == "") {
+				this.inputState = "";
+				this.stateMessage = "";
+				emitvalue = "";
+			}
+			this.$emit("update:password", emitvalue);
+		}
+	}
 };
 </script>
 

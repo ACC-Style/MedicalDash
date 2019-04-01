@@ -7,7 +7,7 @@
 			<div class="cell small-12 medium-10 large-8 m_auto" style="max-width:54em">
 				<div class="card shadow_2 cell bg_secondary-n2 br_primary-n4">
 					<div
-						class="card-divider color_white font-size_3 p_4 texture_dust"
+						class="card-divider c_white font_bold font_3 p_4 texture_dust"
 						style="z-index:10"
 						v-bind:class="{'bg_alert-n3': pageHasError() , 'bg_primary-n3': !pageHasError()}"
 						@click="pageValidation()"
@@ -36,7 +36,7 @@
 									<div class="grid-x grid-padding-x p-y_3">
 										<div class="medium-6 cell">
 											<inputUsername
-												class="m-t_2 m-t_0:medium"
+												class="m-t_2 m-t_0:md"
 												:label="'Username'"
 												:required="true"
 												:pageHasError="pageHasError()"
@@ -52,7 +52,7 @@
 														type="checkbox"
 														name="exampleSwitch"
 													>
-													<label class="switch-paddle" for="tinySwitch_rememberMe">
+													<label class="bg_secondary-n5 switch-paddle" for="tinySwitch_rememberMe">
 														<span class="show-for-sr">Keep Me Logged In</span>
 													</label>
 												</div>
@@ -64,7 +64,7 @@
 										</div>
 										<div class="medium-6 cell">
 											<inputPassword
-												class="m-t_4 m-t_0:medium"
+												class="m-t_4 m-t_0:md"
 												:label="'Password'"
 												:required="true"
 												:pageHasError="pageHasError()"
@@ -73,7 +73,7 @@
 												v-on:update:password="password = $event"
 											></inputPassword>
 											<div
-												class="hover:underline float-right m-t_3 m-t_0:medium c_primary font_n1"
+												class="h:underline float-right m-t_3 m-t_0:md c_primary font_n1"
 												@click="onModeChange('resetStart')"
 											>reset my password</div>
 										</div>
@@ -82,11 +82,11 @@
 								<div class="grid-container clearfix">
 									<div class="grid-x justify-end">
 										<div class="medium-8 cell"></div>
-										<div class="medium-4 cell m-t_4 m-t_0:medium">
+										<div class="medium-4 cell m-t_4 m-t_0:md">
 											<a
 												@click="pageValidation()"
 												v-if="!submitDisabled()"
-												class="button display-block color_white m-b_0 br_radius expanded disabled br_primary-n3"
+												class="button display-block c_white m-b_0 br_radius expanded disabled br_primary-n3"
 											>
 												Log In
 												<i class="fal fa-ban"></i>
@@ -94,7 +94,7 @@
 											<router-link
 												to="/dashboard"
 												v-if="submitDisabled()"
-												class="button display-block color_white m-b_0 br_radius expanded"
+												class="button display-block c_white m-b_0 br_radius expanded"
 											>
 												Log In
 												<i class="fal fa-arrow-alt-right"></i>
@@ -112,24 +112,24 @@
 												<li>
 													<a
 														href
-														class="button secondary expanded br_radius hollow hover:bg_secondary-4"
+														class="button secondary expanded br_radius hollow h:bg_secondary-4"
 													>Text me an unlock code</a>
 												</li>
 												<li>
 													<a
 														href
-														class="button secondary expanded br_radius hollow hover:bg_secondary-4"
+														class="button secondary expanded br_radius hollow h:bg_secondary-4"
 													>Email me a reset link</a>
 												</li>
 												<li>
 													<a
 														href
-														class="button secondary expanded br_radius hollow hover:bg_secondary-4"
+														class="button secondary expanded br_radius hollow h:bg_secondary-4"
 													>Answer security questions</a>
 												</li>
 												<li
 													@click="onModeChange('login')"
-													class="text-center hover:bg_secondary-5 font_0 underline hover:none c_primary center p-x_5 p-y_2 br_radius"
+													class="text-center h:bg_secondary-5 font_0 underline h:none c_primary center p-x_5 p-y_2 br_radius"
 												>go back to login</li>
 											</ul>
 										</div>
@@ -139,7 +139,7 @@
 						</transition>
 					</div>
 					<div class="texture_dark p_3 text-center">
-						<a class="link secondary hover:underline">I don't have an account</a>
+						<a class="link secondary h:underline">I don't have an account</a>
 					</div>
 				</div>
 				<div class="p_3 font_n1 text-center">
@@ -159,44 +159,44 @@ import inputUsername from "@/components/inputUsername.vue";
 import loginLogo from "@/components/loginLogo.vue";
 
 export default {
-  name: "login",
-  components: {
-    inputPassword,
-    inputUsername,
-    loginLogo
-  },
-  data() {
-    return {
-      username: "",
-      password: "",
-      pageError: "",
-      mode: "login"
-    };
-  },
-  methods: {
-    submitDisabled: function() {
-      if (this.username != "" && this.password != "") {
-        return true;
-      }
-      return false;
-    },
-    pageHasError: function() {
-      if (this.pageError != "") {
-        return true;
-      }
-      return false;
-    },
-    pageValidation() {
-      if (this.pageError == "") {
-        this.pageError = "Your email and password does not match our records.";
-      } else {
-        this.pageError = "";
-      }
-    },
-    onModeChange(value) {
-      this.pageError = "";
-      this.mode = value;
-    }
-  }
+	name: "login",
+	components: {
+		inputPassword,
+		inputUsername,
+		loginLogo
+	},
+	data() {
+		return {
+			username: "",
+			password: "",
+			pageError: "",
+			mode: "login"
+		};
+	},
+	methods: {
+		submitDisabled: function() {
+			if (this.username != "" && this.password != "") {
+				return true;
+			}
+			return false;
+		},
+		pageHasError: function() {
+			if (this.pageError != "") {
+				return true;
+			}
+			return false;
+		},
+		pageValidation() {
+			if (this.pageError == "") {
+				this.pageError = "Your email and password does not match our records.";
+			} else {
+				this.pageError = "";
+			}
+		},
+		onModeChange(value) {
+			this.pageError = "";
+			this.mode = value;
+		}
+	}
 };
 </script>

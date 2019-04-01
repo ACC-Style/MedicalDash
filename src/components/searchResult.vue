@@ -17,7 +17,7 @@
 							{{fullName}}
 							<a
 								@click="$emit('share-record')"
-								class="bg_secondary-4 float-right font_0 hover:bg_secondary p-l_3 p-r_3 p_2"
+								class="bg_secondary-4 float-right font_0 h:bg_secondary p-l_3 p-r_3 p_2"
 							>
 								<i class="fas fa-share-alt-square"></i>
 							</a>
@@ -92,7 +92,8 @@
 								<i v-if="!showChildren" class="fas fa-chevron-circle-r p-r_3"></i>
 								{{children.length}} linked account(s)
 							</a>
-							<a @click="selectable_toggle" class="link float-right m-l_3 m-r_3 flex-1">manage &nbsp;
+							<a @click="selectable_toggle" class="link float-right m-l_3 m-r_3 flex-1">
+								manage &nbsp;
 								<i class="fal fa-pencil"></i>
 							</a>
 						</div>
@@ -127,9 +128,8 @@
 			</div>
 		</div>
 
-		<transition-group name="slideInDown" tag="div">
+		<transition-group name="slideInDown" tag="div" v-if="showChildren">
 			<linkedResult
-				v-if="showChildren"
 				v-for="(child, index) in children"
 				v-bind="child"
 				v-on:breaklink="$emit('breakLinkRepeater',{child:child})"
@@ -142,187 +142,187 @@
 import linkedResult from "@/components/linkedResult.vue";
 
 export default {
-  name: "searchResults",
-  components: {
-    linkedResult
-  },
-  props: {
-    member: Object,
-    fullName: String,
-    personifyNumber: Number,
-    badgeNumber: { type: Number, default: -1 },
-    emailAddress: { type: String, default: "" },
-    location: String,
-    userName: String,
-    password: String,
-    memberType: { type: String, default: "NPI" },
-    iscienceBadge: { type: Number, default: -1 },
-    bruteForceLock: { type: Boolean, default: false },
-    expoBadge: { type: Boolean, default: false },
-    children: { type: Array, default: undefined }
-  },
-  computed: {
-    hasMembership: function() {
-      if (this.memberType != "" && this.memberType != "NPI") {
-        return true;
-      }
-      return false;
-    },
-    hasBadge: function() {
-      return this.badgeNumber == -1 ? false : true;
-    },
-    hasIScience: function() {
-      return this.iscienceBadge == -1 ? false : true;
-    },
-    hasBruteForceLock: function() {
-      return this.bruteForceLock;
-    },
-    hasExpoBadge: function() {
-      return this.expoBadge;
-    }
-  },
-  data() {
-    return {
-      selectable: false,
-      selected: true,
-      showChildren: false
-    };
-  },
-  methods: {
-    set_selectable: function($set) {
-      this.selectable = $set;
-    },
-    selectable_toggle: function() {
-      this.selectable = !this.selectable;
-    },
-    showChildren_toggle: function() {
-      this.showChildren = !this.showChildren;
-    },
-    select_toggle: function() {
-      if (this.selectable) {
-        this.selected = !this.selected;
-      }
-    }
-  }
+	name: "searchResults",
+	components: {
+		linkedResult
+	},
+	props: {
+		member: Object,
+		fullName: String,
+		personifyNumber: Number,
+		badgeNumber: { type: Number, default: -1 },
+		emailAddress: { type: String, default: "" },
+		location: String,
+		userName: String,
+		password: String,
+		memberType: { type: String, default: "NPI" },
+		iscienceBadge: { type: Number, default: -1 },
+		bruteForceLock: { type: Boolean, default: false },
+		expoBadge: { type: Boolean, default: false },
+		children: { type: Array, default: undefined }
+	},
+	computed: {
+		hasMembership: function() {
+			if (this.memberType != "" && this.memberType != "NPI") {
+				return true;
+			}
+			return false;
+		},
+		hasBadge: function() {
+			return this.badgeNumber == -1 ? false : true;
+		},
+		hasIScience: function() {
+			return this.iscienceBadge == -1 ? false : true;
+		},
+		hasBruteForceLock: function() {
+			return this.bruteForceLock;
+		},
+		hasExpoBadge: function() {
+			return this.expoBadge;
+		}
+	},
+	data() {
+		return {
+			selectable: false,
+			selected: true,
+			showChildren: false
+		};
+	},
+	methods: {
+		set_selectable: function($set) {
+			this.selectable = $set;
+		},
+		selectable_toggle: function() {
+			this.selectable = !this.selectable;
+		},
+		showChildren_toggle: function() {
+			this.showChildren = !this.showChildren;
+		},
+		select_toggle: function() {
+			if (this.selectable) {
+				this.selected = !this.selected;
+			}
+		}
+	}
 };
 </script>
 <style lang="scss">
 .slideIn-enter-active,
 .slideIn-leave-active {
-  transition: transform 0.5s ease, opacity 0.25s ease 0.25s;
+	transition: transform 0.5s ease, opacity 0.25s ease 0.25s;
 }
 .slideIn-enter, .slideIn-leave-to /* .slideIn-leave-active below version 2.1.8 */ {
-  transform: translateX(-100%);
-  opacity: 0;
+	transform: translateX(-100%);
+	opacity: 0;
 }
 .slideIn-enter-to {
-  transform: translateX(1);
-  opacity: 1;
+	transform: translateX(1);
+	opacity: 1;
 }
 .slideInDown-enter-active,
 .slideInDown-leave-active {
-  transition: transform 0.5s ease, opacity 0.25s ease 0.25s;
+	transition: transform 0.5s ease, opacity 0.25s ease 0.25s;
 }
 .slideInDown-enter, .slideInDown-leave-to /* .slideIn-leave-active below version 2.1.8 */ {
-  transform: translateY(-100%);
-  opacity: 0;
+	transform: translateY(-100%);
+	opacity: 0;
 }
 .slideInDown-enter-to {
-  transform: translateY(1);
-  opacity: 1;
+	transform: translateY(1);
+	opacity: 1;
 }
 .slideInDown-move {
-  transition: transform 0.5s ease;
+	transition: transform 0.5s ease;
 }
 
 .result {
-  display: flex;
-  flex-direction: row;
-  position: relative;
+	display: flex;
+	flex-direction: row;
+	position: relative;
 }
 
 .searchResults {
-  z-index: 100;
+	z-index: 100;
 }
 
 .select-container {
-  flex: 0 0 2.25rem;
-  padding: 0;
-  text-align: center;
-  max-width: 0;
-  transition: max-width 0.5s;
+	flex: 0 0 2.25rem;
+	padding: 0;
+	text-align: center;
+	max-width: 0;
+	transition: max-width 0.5s;
 }
 
 .selectable .select-container {
-  max-width: 200px;
+	max-width: 200px;
 }
 
 .detail-container {
-  flex: 1 1 auto;
+	flex: 1 1 auto;
 }
 
 .flag .active {
-  color: white;
+	color: white;
 }
 
 .flag .member.active {
-  background-color: #2e3192;
+	background-color: #2e3192;
 }
 
 .flag .accbadge.active {
-  background-color: #00a400;
+	background-color: #00a400;
 }
 
 .flag .iscience.active {
-  background-color: #6233c9;
+	background-color: #6233c9;
 }
 
 .flag .bruteforce.active {
-  background-color: #c70a0a;
+	background-color: #c70a0a;
 }
 
 .flag .expobadge.active {
-  background-color: #db6d12;
+	background-color: #db6d12;
 }
 
 .bounce-transition {
-  display: inline-block;
+	display: inline-block;
 }
 
 .bounce-enter {
-  width: 2rem;
-  animation: bounce-in 0.5s;
+	width: 2rem;
+	animation: bounce-in 0.5s;
 }
 
 .bounce-leave-to {
-  animation: bounce-out 0.5s;
+	animation: bounce-out 0.5s;
 }
 
 @keyframes bounce-in {
-  0% {
-    transform: translateX(0rem) scaleX(1);
-  }
+	0% {
+		transform: translateX(0rem) scaleX(1);
+	}
 
-  25% {
-    transform: translateX(0.25rem) scaleX(1.25);
-  }
+	25% {
+		transform: translateX(0.25rem) scaleX(1.25);
+	}
 
-  100% {
-    transform: translateX(-2rem) scaleX(0);
-  }
+	100% {
+		transform: translateX(-2rem) scaleX(0);
+	}
 }
 
 @keyframes bounce-out {
-  0% {
-    transform: translateX(0rem) scaleX(1);
-  }
+	0% {
+		transform: translateX(0rem) scaleX(1);
+	}
 
-  25% {
-    transform: translateX(0.25rem) scaleX(1.25);
-  }
+	25% {
+		transform: translateX(0.25rem) scaleX(1.25);
+	}
 
-  100% {
-    transform: translateX(-2rem) scaleX(0);
-  }
+	100% {
+		transform: translateX(-2rem) scaleX(0);
+	}
 }
 </style>

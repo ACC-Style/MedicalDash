@@ -48,15 +48,15 @@
 			<button
 				v-if="phone !=''"
 				type="button"
-				class="c_secondary-4 hover:c_black value-space cell shrink br_solid br-w_1 p_3 p-b_2 br_secondary-4 texture_light"
+				class="c_secondary-4 h:c_black value-space cell shrink br_solid br-w_1 p_3 p-b_2 br_secondary-4 texture_light"
 				@click="resetphone"
 			>
 				<i class="fas fa-times"></i>
 			</button>
-			
+
 			<button
 				type="button"
-				class="value-space cell shrink br_solid br-w_1 p_3 p-b_2 br_secondary-4 texture_light c_secondary-4 hover:c_black"
+				class="value-space cell shrink br_solid br-w_1 p_3 p-b_2 br_secondary-4 texture_light c_secondary-4 h:c_black"
 				@click="phoneShowToggle"
 			>
 				<i v-if="phoneShow" class="fas fa-eye"></i>
@@ -70,53 +70,53 @@
 import messageHolder from "@/components/subComponents/inputMessageHolder.vue";
 import valueIcon from "@/components/subComponents/inputValueIcon.vue";
 export default {
-  name: "inputPhoneNumber",
-  props: {
-    label: { type: String, default: "Phone Number" },
-    value: { type: String, default: "" },
-    required: { type: Boolean, default: "true" },
-    pageHasError: { type: Boolean, default: false }
-  },
-  components: {
-    messageHolder,
-    valueIcon
-  },
-  data() {
-    return {
-      phone: this.value,
-      phoneShow: false,
-      inputHasError: false,
-      inputState: "",
-      stateMessage: ""
-    };
-  },
-  methods: {
-    clearInput() {
-      this.phone = "";
-      this.onChange(this.phone);
-    },
-    validate(value) {
-      var valid = true,
-        phoneLength = 10;
-      if (value.length <= phoneLength) {
-        this.inputState = "alert";
-        this.stateMessage = "phone is too short";
-        valid = false;
-      }
-      return valid;
-    },
-    onChange(value) {
-      // write any logic around how this should be protected, escaped, validated.
-      if (value == "") {
-        this.inputState = "";
-        this.stateMessage = "";
-        emitvalue = "";
-      }
-      if (validate(value)) {
-        this.$emit("update:phone", emitvalue);
-      }
-    }
-  }
+	name: "inputPhoneNumber",
+	props: {
+		label: { type: String, default: "Phone Number" },
+		value: { type: String, default: "" },
+		required: { type: Boolean, default: "true" },
+		pageHasError: { type: Boolean, default: false }
+	},
+	components: {
+		messageHolder,
+		valueIcon
+	},
+	data() {
+		return {
+			phone: this.value,
+			phoneShow: false,
+			inputHasError: false,
+			inputState: "",
+			stateMessage: ""
+		};
+	},
+	methods: {
+		clearInput() {
+			this.phone = "";
+			this.onChange(this.phone);
+		},
+		validate(value) {
+			var valid = true,
+				phoneLength = 10;
+			if (value.length <= phoneLength) {
+				this.inputState = "alert";
+				this.stateMessage = "phone is too short";
+				valid = false;
+			}
+			return valid;
+		},
+		onChange(value) {
+			// write any logic around how this should be protected, escaped, validated.
+			if (value == "") {
+				this.inputState = "";
+				this.stateMessage = "";
+				emitvalue = "";
+			}
+			if (validate(value)) {
+				this.$emit("update:phone", emitvalue);
+			}
+		}
+	}
 };
 </script>
 

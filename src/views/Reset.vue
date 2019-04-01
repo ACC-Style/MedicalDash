@@ -36,7 +36,7 @@
 											<div class="grid-x grid-margin-x">
 												<div class="cell large-6">
 													<inputPassword
-														class="m-t_4 m-t_0:medium"
+														class="m-t_4 m-t_0:md"
 														:label="'Password'"
 														:required="true"
 														:pageHasError="pageHasError()"
@@ -47,7 +47,7 @@
 												</div>
 												<div class="cell large-6">
 													<inputPassword
-														class="m-t_4 m-t_0:medium"
+														class="m-t_4 m-t_0:md"
 														:label="'Confirm Password'"
 														:required="true"
 														:pageHasError="pageHasError()"
@@ -62,7 +62,7 @@
 								</form>
 								<div class="grid-container clearfix">
 									<div class="grid-x justify-end">
-										<div class="medium-4 cell m-t_4 m-t_0:medium p-t_4">
+										<div class="medium-4 cell m-t_4 m-t_0:md p-t_4">
 											<a
 												@click="pageValidation()"
 												v-if="!submitDisabled()"
