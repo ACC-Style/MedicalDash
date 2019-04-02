@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["dash"],{"8e42":function(e,t,s){"use strict";s.r(t);var n=function(){var e=this,t=e.$createElement;e._self._c;return e._m(0)},a=[function(){var e=this,t=e.$createElement,s=e._self._c||t;return s("div",{staticClass:"dash p_4"},[s("h1",{staticClass:"c_white"},[e._v("DASH")])])}],c=s("2877"),i={},l=Object(c["a"])(i,n,a,!1,null,null,null);l.options.__file="Dash.vue";t["default"]=l.exports}}]);
+//# sourceMappingURL=dash-legacy.d7f1069d.js.map

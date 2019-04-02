@@ -10,8 +10,8 @@
 					<div class="card-section relative br_primary-n3">
 						<ul class="no-bullet">
 							<li>
-								<a
-									href
+								<router-link
+									to="/dash"
 									class="button relative hollow br_radius animated-button victoria-two expanded grid-x"
 								>
 									<div class="grid-x font_2 font_3:md">
@@ -25,10 +25,11 @@
 											<i class="font_4 fas fa-angle-double-right"></i>
 										</div>
 									</div>
-								</a>
+								</router-link>
 							</li>
 							<li>
-								<a
+								<router-link
+									to="/challenges"
 									href
 									class="button relative hollow br_radius animated-button victoria-two expanded grid-x"
 								>
@@ -43,10 +44,11 @@
 											<i class="font_2 fas fa-angle-double-right"></i>
 										</div>
 									</div>
-								</a>
+								</router-link>
 							</li>
 							<li>
-								<a
+								<router-link
+									to="/leaderboard"
 									href
 									class="button relative hollow br_radius animated-button victoria-two expanded grid-x"
 								>
@@ -61,7 +63,7 @@
 											<i class="font_2 fas fa-angle-double-right"></i>
 										</div>
 									</div>
-								</a>
+								</router-link>
 							</li>
 							<li>
 								<router-link

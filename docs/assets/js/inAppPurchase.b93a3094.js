@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["inAppPurchase"],{"1fb4":function(e,n,t){"use strict";t.r(n);var s=function(){var e=this,n=e.$createElement;e._self._c;return e._m(0)},u=[function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("div",{staticClass:"about p_4"},[t("h1",[e._v("Shop")])])}],a=t("2877"),c={},r=Object(a["a"])(c,s,u,!1,null,null,null);r.options.__file="InAppPurchase.vue";n["default"]=r.exports}}]);
-//# sourceMappingURL=inAppPurchase.b93a3094.js.map

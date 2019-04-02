@@ -9,11 +9,11 @@
 		"build-css": "node-sass src/assets/scss/index.scss public/assets/css/index.css"
 	},
 	"dependencies": {
-		"node-sass": "^4.9.3",
+		"node-sass": "^4.11.0",
 		"sass-loader": "^7.1.0",
 		"scss-loader": "0.0.1",
-		"vue": "^2.5.17",
-		"vue-router": "^3.0.1",
+		"vue": "^2.6.10",
+		"vue-router": "^3.0.2",
 		"vuex": "^3.0.1"
 	},
 	"devDependencies": {
@@ -21,7 +21,7 @@
 		"@vue/cli-plugin-eslint": "^3.0.1",
 		"@vue/cli-service": "^3.0.1",
 		"@vue/eslint-config-prettier": "^3.0.1",
-		"vue-template-compiler": "^2.5.17"
+		"vue-template-compiler": "^2.6.10"
 	},
 	"eslintConfig": {
 		"root": true,
