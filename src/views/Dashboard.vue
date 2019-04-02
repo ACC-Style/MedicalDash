@@ -64,8 +64,8 @@
 								</a>
 							</li>
 							<li>
-								<a
-									href
+								<router-link
+									to="/inapppurchase"
 									class="button relative hollow br_radius animated-button victoria-two expanded grid-x m-b_0"
 								>
 									<div class="grid-x">
@@ -79,7 +79,7 @@
 											<i class="font_2 fas fa-angle-double-right"></i>
 										</div>
 									</div>
-								</a>
+								</router-link>
 							</li>
 						</ul>
 					</div>

@@ -97,7 +97,7 @@
 				</div>
 			</div>
 			<div class="card-action bg_secondary-n2">
-				<router-link to="store" class="button tiny hollow br_radius m_3 font_n1">Buy More Items</router-link>
+				<router-link to="/inapppurchase" class="button tiny hollow br_radius m_3 font_n1">Buy More Items</router-link>
 			</div>
 		</div>
 	</div>
