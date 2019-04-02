@@ -54,6 +54,16 @@ export default new Router({
 			component: () => import(/* webpackChunkName: "dash" */ "./views/Dash.vue")
 		},
 		{
+			path: "/challenges",
+			name: "challenges",
+			// route level code-splitting
+			// this generates a separate chunk (challenges.[hash].js) for this route
+			// which is lazy-loaded when the route is visited.
+			component: () =>
+				import(/* webpackChunkName: "challenges" */ "./views/Challenges.vue")
+		},
+
+		{
 			path: "/reset",
 			name: "reset",
 			// route level code-splitting
