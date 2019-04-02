@@ -39,11 +39,11 @@
 						</div>
 					</div>
 					<div class="grid-x">
-						<cell class="shrink cell text-left">12</cell>
-						<cell class="auto cell text-center">
+						<div class="shrink cell text-left">12</div>
+						<div class="auto cell text-center">
 							<p class="font_n2 c_primary-4 m-b_2">100,254 xp to next level</p>
-						</cell>
-						<cell class="shrink cell text-right">13</cell>
+						</div>
+						<div class="shrink cell text-right">13</div>
 					</div>
 				</div>
 			</div>

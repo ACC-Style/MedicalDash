@@ -1,9 +1,14 @@
 <template>
 	<div class="about" id="inAppPurchase">
 		<userbar></userbar>
-		<h1 class="c_white text-center font_3 br_0 br-b_1 br_white-5 br_dotted">Gain a little edge</h1>
-		<div class="grid-x grid-margin-y grid-margin-x">
-			<productitem v-for="(item, index) in items" v-bind:key="index" v-bind="item"></productitem>
+		<div class="relative">
+			<router-link to="dashboard" class="absolute br_circle bg_warning t_2 l_2 thumbnail c_white p_3">
+				<i class="fas fa-arrow-left"></i>
+			</router-link>
+			<h1 class="c_white text-center font_2 br_white-5 br_dotted br_0 br-b_1 p-t_4">Gain a Little Edge</h1>
+			<div class="grid-x grid-margin-y grid-margin-x">
+				<productitem v-for="(item, index) in items" v-bind:key="index" v-bind="item"></productitem>
+			</div>
 		</div>
 	</div>
 </template>
