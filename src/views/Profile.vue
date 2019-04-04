@@ -4,16 +4,12 @@
 			<i class="fas fa-arrow-left"></i>
 		</router-link>
 		<div class="user text-center">
-			<img
-				src="https://randomuser.me/api/portraits/women/58.jpg"
-				alt="Kenzi Hopkins"
-				class="br_round br_white-5 br_3 br_solid"
-			>
+			<img src="assets/img/Bruce.jpg" alt="Bruce Carper" class="br_round br_white-5 br_3 br_solid">
 		</div>
 		<h1 class="c_white lh_1 text-center">
 			<span class="d_inline-block font_n2 lh_1">User Name:</span>
 			<br>
-			<span class="font_display">Kenzi Hopkins</span>
+			<span class="font_display">Bruce Carper</span>
 			<br>
 			<span class="d_inline-block font_1 lh_1">Level:12</span>
 		</h1>
