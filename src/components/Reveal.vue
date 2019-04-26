@@ -1,6 +1,6 @@
 <template>
 <div id="reveal-dialog" class="reveal" data-reveal>
-            <button class="close-button" data-close aria-label="Close modal" type="button">
+            <button class="close-button" v-if="!hideCloseButton" data-close aria-label="Close modal" type="button">
               <span aria-hidden="true"><i class="fas fa-times"></i></span>
             </button>
             <slot name="header">
@@ -20,8 +20,16 @@ export default {
   mounted() {
     this.reveal = new Foundation.Reveal($("#reveal-dialog"), {
       // These options can be declarative using the data attributes
-      animationIn: "scale-in-up"
+      animationIn: "scale-in-up",
+      closeOnEsc: false,
+      closeOnClick: false
     });
+  },
+  props: {
+    animationIn: {type: String, default: "scale-in-up"},
+    closeOnEsc: {type: Boolean, default: false},
+    closeOnClick: {type: Boolean, default: true},
+    hideCloseButton: {type: Boolean, default: false}
   },
   data() {
     return {

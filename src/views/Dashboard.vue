@@ -12,6 +12,7 @@
 							<li>
 								<router-link
 									to="/dash"
+									v-bind:class="[{ disabled: getDash() === 0}]"
 									class="button relative hollow br_radius animated-button victoria-two expanded grid-x"
 								>
 									<div class="grid-x font_2 font_3:md">
@@ -25,6 +26,12 @@
 											<i class="font_4 fas fa-angle-double-right"></i>
 										</div>
 									</div>
+									<small 
+										class="c_white lowercase"
+									 	v-if="getDash()===0"
+									>
+										(Wait {{getRechargeTimer()}} for dash recharge, or visit store to buy more dash)
+									</small>
 								</router-link>
 							</li>
 							<li>
@@ -100,11 +107,22 @@ export default {
 	components: {
 		loginLogo,
 		userBar
+	},
+	methods: {
+		getDash() {
+			return this.$store.state.userModule.dash;
+		},
+		getRechargeTimer () {
+			return this.$store.getters.dashRechargeTimer;
+		}
 	}
 };
 </script>
 
 <style scoped>
+a.button.disabled {
+	pointer-events: none;
+}
 /* https://codepen.io/sazzad/pen/yNNNJG?editors=0100 */
 a.animated-button:link,
 a.animated-button:visited {

@@ -112,7 +112,9 @@ export default {
       username: "",
       password: "",
       pageError: "",
-      mode: "resetPassword"
+      mode: "resetPassword",
+			password_1: "",
+			password_2: ""
     };
   },
   methods: {
