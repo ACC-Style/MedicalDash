@@ -8,8 +8,8 @@
 			<div class="cell small-12 medium-10 large-8 m_auto" style="max-width:54em">
 				<div class="card shadow_2 cell br_radius bg_secondary br_primary-n1 bw_2">
 					<div class="card-section relative br_primary-n3">
-						<ul class="no-bullet">
-							<li>
+						<ul class="no-bullet grid-x grid-margin-x">
+							<li class="cell small-12">
 								<router-link
 									to="/dash"
 									v-bind:class="[{ disabled: getDash() === 0}]"
@@ -26,15 +26,13 @@
 											<i class="font_4 fas fa-angle-double-right"></i>
 										</div>
 									</div>
-									<small 
+									<small
 										class="c_white lowercase"
-									 	v-if="getDash()===0"
-									>
-										(Wait {{getRechargeTimer()}} for dash recharge, or visit store to buy more dash)
-									</small>
+										v-if="getDash()===0"
+									>(Wait {{getRechargeTimer()}} for dash recharge, or visit store to buy more dash)</small>
 								</router-link>
 							</li>
-							<li>
+							<li class="cell small-12">
 								<router-link
 									to="/challenges"
 									href
@@ -53,7 +51,7 @@
 									</div>
 								</router-link>
 							</li>
-							<li>
+							<li class="cell small-12">
 								<router-link
 									to="/leaderboard"
 									href
@@ -72,20 +70,26 @@
 									</div>
 								</router-link>
 							</li>
-							<li>
+							<li class="cell small-12 medium-6">
 								<router-link
-									to="/inapppurchase"
-									class="button relative hollow br_radius animated-button victoria-two expanded grid-x m-b_0"
+									to="/profile"
+									class="button relative hollow br_radius animated-button br_secondary-n4 victoria-two expanded grid-x m-b_0 bg_secondary-n2 h:c_secondary-5 c_secondary-3"
 								>
 									<div class="grid-x">
-										<div class="p_2 cell shrink">
-											<i class="font_2 fas fa-angle-double-right"></i>
-										</div>
 										<div class="cell auto text font_2 font_display m-t_2 font_bold font_italic">
-											<i class="fas fa-cart-plus"></i> Store
+											<i class="fas fa-user p-r_4"></i>Profile
 										</div>
-										<div class="p_2 cell shrink">
-											<i class="font_2 fas fa-angle-double-right"></i>
+									</div>
+								</router-link>
+							</li>
+							<li class="cell small-12 medium-6">
+								<router-link
+									to="/inapppurchase"
+									class="button relative hollow br_radius animated-button br_secondary-n4 victoria-two expanded grid-x bg_secondary-n2 m-b_0 h:c_secondary-5 c_secondary-3"
+								>
+									<div class="grid-x">
+										<div class="cell auto text font_2 font_display m-t_2 font_bold font_italic">
+											<i class="fas fa-cart-plus p-r_4"></i> Store
 										</div>
 									</div>
 								</router-link>
@@ -112,7 +116,7 @@ export default {
 		getDash() {
 			return this.$store.state.userModule.dash;
 		},
-		getRechargeTimer () {
+		getRechargeTimer() {
 			return this.$store.getters.dashRechargeTimer;
 		}
 	}

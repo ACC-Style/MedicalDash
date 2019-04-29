@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["dashComplete"],{cfc5:function(e,t,s){"use strict";s.r(t);var n=function(){var e=this,t=e.$createElement;e._self._c;return e._m(0)},c=[function(){var e=this,t=e.$createElement,s=e._self._c||t;return s("div",{staticClass:"dash-complete p_4"},[s("h1",{staticClass:"c_white"},[e._v("DASH COMPLETE")])])}],l=s("2877"),a={},i=Object(l["a"])(a,n,c,!1,null,null,null);i.options.__file="DashCompleted.vue";t["default"]=i.exports}}]);
-//# sourceMappingURL=dashComplete-legacy.47e11a25.js.map
