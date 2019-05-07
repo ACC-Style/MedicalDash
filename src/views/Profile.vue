@@ -44,56 +44,75 @@
 				</div>
 			</div>
 		</div>
-		<h4 class="text-center c_white">Invetory</h4>
+		<h4 class="text-center c_white">Inventory</h4>
 		<div class="card shadow-3 br_primary-n3 bg_primary-n3 text-center c_white">
-			<div class="card-section m_0 grid-container">
-				<div class="grid-y grid-margin-y">
+			<div class="card-section m_0">
+				<div class="grid-y grid-margin-y font_n1 font_0:md">
 					<div class="cell shrink">
 						<div class="grid-x grid-margin-x">
 							<div class="cell p_3 bg_primary-n2 shadow auto br_white-4 br_solid br_4">
-								<i class="fas fa-air-freshener font-golden_2"></i>
+								<div class="grid-x grid-margin-x">
+									<div class="cell small-12 medium-4 shrink p-x_4 p-t_3">
+										<i class="fas fa-air-freshener font-golden_3"></i>
+									</div>
+									<div class="cell small-12 medium-8">
+										<div class="font-golden_1 font_bold m-b_0">3 refreshes</div>
+										<div
+											class="font-golden_0 m-t_2"
+										>Reset the dash with no penalties. Start over with 3 new questions and all un used inventory.</div>
+									</div>
+								</div>
+
 								<br>
-								<span class="font-golden_0">3 refreshes</span>
 							</div>
 							<div class="cell p_3 bg_primary-n2 shadow auto br_white-4 br_solid br_4">
-								<i class="fas fa-ghost font-golden_2"></i>
-								<br>
-								<span class="font-golden_0">3 ghosts</span>
+								<div class="grid-x grid-margin-x">
+									<div class="cell small-12 medium-4 shrink p-x_4 p-t_3">
+										<i class="fas fa-ghost font-golden_3"></i>
+									</div>
+									<div class="cell small-12 medium-8">
+										<div class="font-golden_1 font_bold m-b_0">2 Ghosts</div>
+										<div
+											class="font-golden_0 m-t_2"
+										>Skip the next question as it was wrong but only take a 10sec penalty.</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 					<div class="cell shrink">
 						<div class="grid-x grid-margin-x">
 							<div class="cell p_3 bg_primary-n2 shadow auto br_white-4 br_solid br_4">
-								<i class="fas fa-alicorn font-golden_2"></i>
-								<br>
-								<span class="font-golden_0">3 Skips</span>
+								<div class="grid-x grid-margin-x">
+									<div class="cell small-12 medium-4 shrink p-x_4 p-t_3">
+										<i class="fas fa-alicorn font-golden_3"></i>
+									</div>
+									<div class="cell small-12 medium-8">
+										<div class="font-golden_1 font_bold m-b_0">1 Skip</div>
+										<div class="font-golden_0 m-t_2">Skip the next question as it was wrong with no penalty.</div>
+									</div>
+								</div>
 							</div>
 							<div class="cell p_3 bg_primary-n2 shadow auto br_white-4 br_solid br_4">
-								<i class="fas fa-alarm-clock font-golden_2"></i>
-								<br>
-								<span class="font-golden_0">1 slow down</span>
-							</div>
-						</div>
-					</div>
-					<div class="cell shrink">
-						<div class="grid-x grid-margin-x">
-							<div class="cell p_3 bg_primary-n2 shadow auto br_white-4 br_solid br_4">
-								<i class="fas fa-axe font-golden_2"></i>
-								<br>
-								<span class="font-golden_0">3 Cut Time</span>
-							</div>
-							<div class="cell p_3 bg_primary-n2 shadow auto br_white-4 br_solid br_4">
-								<i class="fas fa-battery-bolt font-golden_2"></i>
-								<br>
-								<span class="font-golden_0">3 recharge</span>
+								<div class="grid-x grid-margin-x">
+									<div class="cell small-12 medium-4 shrink p-x_4 p-t_3">
+										<i class="fas fa-alarm-clock font-golden_3"></i>
+									</div>
+									<div class="cell small-12 medium-8">
+										<div class="font-golden_1 font_bold m-b_0">1 slow down</div>
+										<div class="font-golden_0 m-t_2">Give a 20 second penalty to your opponent.</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="card-action bg_secondary-n2">
-				<router-link to="/inapppurchase" class="button tiny hollow br_radius m_3 font_n1">Buy More Items</router-link>
+				<router-link
+					to="/inapppurchase"
+					class="button large secondary br_radius m_3 font_n1"
+				>Buy More Items</router-link>
 			</div>
 		</div>
 	</div>

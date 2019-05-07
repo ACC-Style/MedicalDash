@@ -13,17 +13,17 @@
 								<router-link
 									to="/dash"
 									v-bind:class="[{ disabled: getDash() === 0}]"
-									class="button relative hollow br_radius animated-button victoria-two expanded grid-x"
+									class="button relative hollow br_radius animated-button victoria-two expanded grid-x bg_primary"
 								>
-									<div class="grid-x font_2 font_3:md">
+									<div class="grid-x font_3 font_4:md">
 										<div class="p_2 cell shrink">
-											<i class="font_4 fas fa-angle-double-right"></i>
+											<i class="font_4 fas fa-angle-double-right c_white"></i>
 										</div>
 										<div class="cell auto text font_display font_bold font_italic p-t_3">
 											<i class="fas fa-bolt"></i> Start Dash
 										</div>
 										<div class="p_2 cell shrink">
-											<i class="font_4 fas fa-angle-double-right"></i>
+											<i class="font_4 fas fa-angle-double-right c_white"></i>
 										</div>
 									</div>
 									<small
@@ -70,25 +70,25 @@
 									</div>
 								</router-link>
 							</li>
-							<li class="cell small-12 medium-6">
+							<li class="cell small-6">
 								<router-link
 									to="/profile"
 									class="button relative hollow br_radius animated-button br_secondary-n4 victoria-two expanded grid-x m-b_0 bg_secondary-n2 h:c_secondary-5 c_secondary-3"
 								>
 									<div class="grid-x">
-										<div class="cell auto text font_2 font_display m-t_2 font_bold font_italic">
+										<div class="cell auto text font_2:md font_1 font_display m-t_2 font_bold font_italic">
 											<i class="fas fa-user p-r_4"></i>Profile
 										</div>
 									</div>
 								</router-link>
 							</li>
-							<li class="cell small-12 medium-6">
+							<li class="cell small-6">
 								<router-link
 									to="/inapppurchase"
 									class="button relative hollow br_radius animated-button br_secondary-n4 victoria-two expanded grid-x bg_secondary-n2 m-b_0 h:c_secondary-5 c_secondary-3"
 								>
 									<div class="grid-x">
-										<div class="cell auto text font_2 font_display m-t_2 font_bold font_italic">
+										<div class="cell auto text font_2:md font_1 font_display m-t_2 font_bold font_italic">
 											<i class="fas fa-cart-plus p-r_4"></i> Store
 										</div>
 									</div>

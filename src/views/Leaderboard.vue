@@ -34,14 +34,14 @@ export default {
 					first_name: "Olin",
 					last_name: "Whatson",
 					score: 241445,
-					highlighted: true
+					highlighted: false
 				},
 				{
 					id: 2,
 					first_name: "Andreana",
 					last_name: "Elcomb",
 					score: 461693,
-					highlighted: true
+					highlighted: false
 				},
 				{
 					id: 3,
@@ -52,10 +52,10 @@ export default {
 				},
 				{
 					id: 4,
-					first_name: "Vivian",
-					last_name: "Swarbrick",
-					score: 542632,
-					highlighted: false
+					first_name: "Bruce",
+					last_name: "Carper",
+					score: 779755,
+					highlighted: true
 				},
 				{
 					id: 5,
@@ -69,7 +69,7 @@ export default {
 					first_name: "Pat",
 					last_name: "Ingley",
 					score: 263101,
-					highlighted: true
+					highlighted: false
 				},
 				{
 					id: 7,
@@ -90,7 +90,7 @@ export default {
 					first_name: "Felic",
 					last_name: "Fuster",
 					score: 779744,
-					highlighted: true
+					highlighted: false
 				},
 				{
 					id: 10,
@@ -118,7 +118,7 @@ export default {
 					first_name: "Beaufort",
 					last_name: "Lepoidevin",
 					score: 880361,
-					highlighted: true
+					highlighted: false
 				},
 				{
 					id: 14,
@@ -132,14 +132,14 @@ export default {
 					first_name: "Juliette",
 					last_name: "Draco",
 					score: 260286,
-					highlighted: true
+					highlighted: false
 				},
 				{
 					id: 16,
 					first_name: "Sharity",
 					last_name: "Drew-Clifton",
 					score: 714499,
-					highlighted: true
+					highlighted: false
 				},
 				{
 					id: 17,
@@ -153,7 +153,7 @@ export default {
 					first_name: "Jeffie",
 					last_name: "Pauleau",
 					score: 434428,
-					highlighted: true
+					highlighted: false
 				},
 				{
 					id: 19,
@@ -188,7 +188,7 @@ export default {
 					first_name: "Brina",
 					last_name: "Ainsby",
 					score: 62876,
-					highlighted: true
+					highlighted: false
 				},
 				{
 					id: 24,
@@ -219,8 +219,10 @@ export default {
 					// property doesn't exist on either object
 					return 0;
 				}
-				const varA = typeof a[key] === "string" ? a[key].toUpperCase() : a[key];
-				const varB = typeof b[key] === "string" ? b[key].toUpperCase() : b[key];
+				const varA =
+					typeof a[key] === "string" ? a[key].toUpperCase() : a[key];
+				const varB =
+					typeof b[key] === "string" ? b[key].toUpperCase() : b[key];
 				let comparison = 0;
 				if (varA > varB) {
 					comparison = 1;

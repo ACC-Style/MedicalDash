@@ -59,7 +59,7 @@
 												<label
 													class="switch-value cell auto font_bold p-l_3 c_secondary-3 font-regular"
 													for="tinySwitch_rememberMe"
-												>Remember Me</label>
+												>Keep Me Logged In</label>
 											</div>
 										</div>
 										<div class="medium-6 cell">
@@ -188,7 +188,8 @@ export default {
 		},
 		pageValidation() {
 			if (this.pageError == "") {
-				this.pageError = "Your email and password does not match our records.";
+				this.pageError =
+					"Your email and password does not match our records.";
 			} else {
 				this.pageError = "";
 			}

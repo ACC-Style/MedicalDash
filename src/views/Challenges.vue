@@ -5,7 +5,7 @@
 			<router-link to="dashboard" class="absolute br_circle bg_warning t_2 l_0 thumbnail c_white p_3">
 				<i class="fas fa-arrow-left"></i>
 			</router-link>
-			<h1 class="c_white text-center font_3 br_white-5 br_dotted br_0 br-b_1 p-t_2 p-b_2 lh_1 p-l_3">
+			<h1 class="c_white text-center font_3 br_white-5 br_dotted br_0 br-b_1 p-t_2 p-b_3 lh_1 p-l_3">
 				<div class="uppercase">Daily Challenges</div>
 				<div class="font_n1 c_white-8">Complete Challenges and Get Rewards!</div>
 			</h1>
